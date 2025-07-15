@@ -20,7 +20,7 @@ public class Repository {
 
     // add method logic
     public void add(String fileName) {
-        stagingArea.stageFile(fileName);
+        stagingArea.stagedFile(fileName);
     }
 
     // commit method logic

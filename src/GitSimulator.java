@@ -25,7 +25,7 @@ public class GitSimulator {
                 // case 2 : "add"
                 case "add":
                     if (parts.length > 1) {
-                        respository.add(parts[1]);
+                        repository.add(parts[1]);
                     } else {
                         System.out.println("File name required.");
                     }
@@ -35,7 +35,7 @@ public class GitSimulator {
                 case "commit":
                     if (parts.length > 1 && parts[1].startsWith("-m")) {
                         String message = parts[1].substring(2).trim().replace("\"", "");
-                        repository.commit();
+                        repository.commit(message);
                     }
                     break;
                 // case 4 : "log"
