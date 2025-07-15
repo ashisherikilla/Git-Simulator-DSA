@@ -1,41 +1,63 @@
-# 🌀 Git Simulator using DSA
+# 🌀 Git Simulator using Java DSA + OOPs
 
-A Java-based Git simulator that mimics core Git operations using only Data Structures & Algorithms. No Git libraries, no file storage — just pure in-memory logic using DSA. Perfect for DSA practice and to understand how Git might work under the hood.
+A command-line Git simulator built in Java using core Data Structures & Object-Oriented Programming. This project mimics real Git operations like `add`, `commit`, `log`, `status`, `checkout`, and `branch` — implemented using in-memory logic and DSA principles.
 
 ---
 
 ## 🚀 Features
 
-- `init` – Initialize a new Git repository  
-- `add <filename>` – Stage files for commit  
-- `commit -m "message"` – Create a commit with a message  
-- `status` – Show current file states (tracked/untracked/modified)  
-- `log` – Show the commit history  
-- `checkout <commit_id>` – Move back to a previous commit  
-- `branch <name>` – Create new branches  
-- `merge <branch>` – Merge two branches (optional feature)  
-- `undo` – Undo the last commit  
+- Initialize a repo, add files, make commits
+- View commit history
+- Check file status
+- Branching, checkout and undo support
+- CLI-based simulation
 
 ---
 
-## 🧠 DSA Used
+## 🔍 Concepts Used
 
-Linked List (to store commit history), Stack (for undo commit feature), HashMap (to store staged files and branch pointers), Pointer manipulation (for commit navigation), and optionally Graph (for branching & merging logic).
+- **Data Structures**: Linked List (commits), Stack (undo), HashMap (staging & branches)
+- **OOP**:
+  - Encapsulation (modular classes)
+  - Abstraction (core logic hidden)
+  - Inheritance (extendable commands)
+  - Polymorphism (command execution logic)
 
 ---
 
 ## 🛠️ Tech Stack
 
-Java – main language used  
-VS Code / IntelliJ – to write and run code  
-No database or storage – logic runs in-memory  
-No external libraries – only core Java used  
-CLI-based interaction – all commands handled via console  
+Java – core language  
+VS Code / IntelliJ – IDE  
+No external libraries – just logic  
+Terminal input – CLI based  
+No database – in-memory only  
 
 ---
-## 🖥️ How to Run
 
-1. Clone the repository  
+## 📁 Folder Structure
+
+GitSimulator/
+├── src/
+│ ├── Main.java
+│ ├── GitSimulator.java
+│ ├── Repository.java
+│ ├── Commit.java
+│ ├── FileSnapshot.java
+│ ├── StagingArea.java
+│ ├── BranchManager.java
+│ ├── Command.java
+│ └── Utils.java
+├── README.md
+└── sample_input.txt
+
+---
+
+## 🧪 How to Run
+
 ```bash
 git clone https://github.com/yourusername/Git-Simulator-DSA.git
+cd Git-Simulator-DSA
+javac src/*.java
+java src/Main
 ```
